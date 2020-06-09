@@ -45,6 +45,8 @@ class CacheConfiguration(jHipsterProperties: JHipsterProperties) {
             createCache(cm, com.lot.smartcossiol.domain.User::class.java.name)
             createCache(cm, com.lot.smartcossiol.domain.Authority::class.java.name)
             createCache(cm, com.lot.smartcossiol.domain.User::class.java.name + ".authorities")
+            createCache(cm, com.lot.smartcossiol.domain.Stats::class.java.name)
+            createCache(cm, com.lot.smartcossiol.domain.Devices::class.java.name)
             // jhipster-needle-ehcache-add-entry
         }
     }
