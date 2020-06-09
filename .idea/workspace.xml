@@ -296,6 +296,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SmartCossiolBackendApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="smart-cossiol-backend.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lot.smartcossiol.SmartCossiolBackendApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SmartcossiolBackendApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="smartcossiol-backend.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.lot.smartcossiol.SmartcossiolBackendApp" />

@@ -1,0 +1,22 @@
+entity Stats {
+	temp Integer required,
+	soil Integer required,
+	light Integer required,
+	insertAt Instant required,
+}
+
+entity Devices {
+	title String required,
+    type Type required
+}
+
+enum Type {
+    SmartCosiol
+}
+
+relationship ManyToOne {
+	Stats{Devices(title)} to Devices
+}
+relationship ManyToOne {
+	Devices{User(email)} to User
+}
