@@ -52,10 +52,27 @@ def http_post(url,data):
     
     print(payload)
     s.send(payload)
+
+    data2=""
+    count=0
+    
     while True:
-        data = s.recv(4096)
+        data = s.recv(1024)
         if data:
-            print(str(data, 'utf8'), end='')
+            
+            data=(str(data, 'utf8')) 
+            data2=data+data2
+            count=count+1
+            if count==2:
+                break
+
+            
         else:
             break
-    s.close()
+ 
+    val=(data2.find("id_token"))
+    val2=(data2.find("}"))
+    print(data2[(val):val2])
+
+    
+        
