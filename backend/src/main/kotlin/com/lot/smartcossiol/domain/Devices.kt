@@ -1,16 +1,12 @@
 package com.lot.smartcossiol.domain
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import org.hibernate.annotations.Cache
-import org.hibernate.annotations.CacheConcurrencyStrategy
-
+import com.lot.smartcossiol.domain.enumeration.Type
+import java.io.Serializable
 import javax.persistence.*
 import javax.validation.constraints.*
-
-import java.io.Serializable
-
-import com.lot.smartcossiol.domain.enumeration.Type
+import org.hibernate.annotations.Cache
+import org.hibernate.annotations.CacheConcurrencyStrategy
 
 /**
  * A Devices.
@@ -31,7 +27,7 @@ data class Devices(
     @Column(name = "type", nullable = false)
     var type: Type? = null,
 
-    @ManyToOne    @JsonIgnoreProperties("devices")
+    @ManyToOne @JsonIgnoreProperties("devices")
     var user: User? = null
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
@@ -52,7 +48,6 @@ data class Devices(
         ", title='$title'" +
         ", type='$type'" +
         "}"
-
 
     companion object {
         private const val serialVersionUID = 1L

@@ -3,13 +3,14 @@ package com.lot.smartcossiol.web.rest
 import com.lot.smartcossiol.domain.Stats
 import com.lot.smartcossiol.repository.StatsRepository
 import com.lot.smartcossiol.web.rest.errors.BadRequestAlertException
-
 import io.github.jhipster.web.util.HeaderUtil
 import io.github.jhipster.web.util.ResponseUtil
+import java.net.URI
+import java.net.URISyntaxException
+import javax.validation.Valid
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.ResponseEntity
-
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -18,12 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
-
-import javax.validation.Valid
-import java.net.URI
-import java.net.URISyntaxException
 
 private const val ENTITY_NAME = "stats"
 /**
@@ -93,7 +89,7 @@ class StatsResource(
 
      * @return the [ResponseEntity] with status `200 (OK)` and the list of stats in body.
      */
-    @GetMapping("/stats")    
+    @GetMapping("/stats")
     fun getAllStats(): MutableList<Stats> {
         log.debug("REST request to get all Stats")
         return statsRepository.findAll()

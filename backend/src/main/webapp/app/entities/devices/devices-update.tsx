@@ -99,9 +99,9 @@ export const DevicesUpdate = (props: IDevicesUpdateProps) => {
                   type="select"
                   className="form-control"
                   name="type"
-                  value={(!isNew && devicesEntity.type) || 'SmartCosiol'}
+                  value={(!isNew && devicesEntity.type) || 'SmartCossiol'}
                 >
-                  <option value="SmartCosiol">SmartCosiol</option>
+                  <option value="SmartCossiol">SmartCossiol</option>
                 </AvInput>
               </AvGroup>
               <AvGroup>

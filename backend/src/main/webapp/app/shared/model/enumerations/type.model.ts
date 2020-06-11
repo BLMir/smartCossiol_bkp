@@ -1,3 +1,3 @@
 export const enum Type {
-  SmartCosiol = 'SmartCosiol'
+  SmartCossiol = 'SmartCossiol'
 }

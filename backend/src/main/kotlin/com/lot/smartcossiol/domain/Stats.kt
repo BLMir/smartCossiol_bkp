@@ -1,15 +1,12 @@
 package com.lot.smartcossiol.domain
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import org.hibernate.annotations.Cache
-import org.hibernate.annotations.CacheConcurrencyStrategy
-
-import javax.persistence.*
-import javax.validation.constraints.*
-
 import java.io.Serializable
 import java.time.Instant
+import javax.persistence.*
+import javax.validation.constraints.*
+import org.hibernate.annotations.Cache
+import org.hibernate.annotations.CacheConcurrencyStrategy
 
 /**
  * A Stats.
@@ -37,7 +34,7 @@ data class Stats(
     @Column(name = "insert_at", nullable = false)
     var insertAt: Instant? = null,
 
-    @ManyToOne    @JsonIgnoreProperties("stats")
+    @ManyToOne @JsonIgnoreProperties("stats")
     var devices: Devices? = null
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
@@ -60,7 +57,6 @@ data class Stats(
         ", light=$light" +
         ", insertAt='$insertAt'" +
         "}"
-
 
     companion object {
         private const val serialVersionUID = 1L

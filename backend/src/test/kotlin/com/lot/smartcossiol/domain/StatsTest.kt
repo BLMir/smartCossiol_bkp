@@ -1,8 +1,8 @@
 package com.lot.smartcossiol.domain
 
-import org.junit.jupiter.api.Test
-import org.assertj.core.api.Assertions.assertThat
 import com.lot.smartcossiol.web.rest.equalsVerifier
+import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Test
 
 class StatsTest {
 

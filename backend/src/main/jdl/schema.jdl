@@ -11,7 +11,7 @@ entity Devices {
 }
 
 enum Type {
-    SmartCosiol
+    SmartCossiol
 }
 
 relationship ManyToOne {

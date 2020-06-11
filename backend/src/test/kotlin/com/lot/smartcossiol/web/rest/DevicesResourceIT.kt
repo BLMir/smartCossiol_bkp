@@ -2,11 +2,13 @@ package com.lot.smartcossiol.web.rest
 
 import com.lot.smartcossiol.SmartCossiolBackendApp
 import com.lot.smartcossiol.domain.Devices
+import com.lot.smartcossiol.domain.enumeration.Type
 import com.lot.smartcossiol.repository.DevicesRepository
 import com.lot.smartcossiol.web.rest.errors.ExceptionTranslator
-
+import javax.persistence.EntityManager
 import kotlin.test.assertNotNull
-
+import org.assertj.core.api.Assertions.assertThat
+import org.hamcrest.Matchers.hasItem
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.MockitoAnnotations
@@ -16,13 +18,6 @@ import org.springframework.data.web.PageableHandlerMethodArgumentResolver
 import org.springframework.http.MediaType
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
 import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.setup.MockMvcBuilders
-import org.springframework.transaction.annotation.Transactional
-import org.springframework.validation.Validator
-import javax.persistence.EntityManager
-
-import org.assertj.core.api.Assertions.assertThat
-import org.hamcrest.Matchers.hasItem
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
@@ -30,8 +25,9 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
-
-import com.lot.smartcossiol.domain.enumeration.Type
+import org.springframework.test.web.servlet.setup.MockMvcBuilders
+import org.springframework.transaction.annotation.Transactional
+import org.springframework.validation.Validator
 
 /**
  * Integration tests for the [DevicesResource] REST controller.
@@ -121,7 +117,6 @@ class DevicesResourceIT {
         assertThat(devicesList).hasSize(databaseSizeBeforeCreate)
     }
 
-
     @Test
     @Transactional
     fun checkTitleIsRequired() {
@@ -174,7 +169,7 @@ class DevicesResourceIT {
             .andExpect(jsonPath("$.[*].title").value(hasItem(DEFAULT_TITLE)))
             .andExpect(jsonPath("$.[*].type").value(hasItem(DEFAULT_TYPE.toString())))
     }
-    
+
     @Test
     @Transactional
     fun getDevices() {
@@ -277,8 +272,8 @@ class DevicesResourceIT {
         private const val DEFAULT_TITLE = "AAAAAAAAAA"
         private const val UPDATED_TITLE = "BBBBBBBBBB"
 
-        private val DEFAULT_TYPE: Type = Type.SmartCosiol
-        private val UPDATED_TYPE: Type = Type.SmartCosiol
+        private val DEFAULT_TYPE: Type = Type.SmartCossiol
+        private val UPDATED_TYPE: Type = Type.SmartCossiol
 
         /**
          * Create an entity for this test.

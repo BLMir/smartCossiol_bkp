@@ -11,7 +11,7 @@
         {
             "fieldName": "type",
             "fieldType": "Type",
-            "fieldValues": "SmartCosiol",
+            "fieldValues": "SmartCossiol",
             "fieldValidateRules": [
                 "required"
             ]
