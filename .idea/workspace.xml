@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b5aac52-147b-460e-ad0b-08c05c1ac881" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.jhipster/Devices.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.jhipster/Devices.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/jdl/schema.jdl" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/jdl/schema.jdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/domain/Devices.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/domain/Devices.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/domain/Stats.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/domain/Stats.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/domain/enumeration/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/domain/enumeration/Type.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/repository/StatsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/repository/StatsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/web/rest/DevicesResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/web/rest/DevicesResource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/web/rest/StatsResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/web/rest/StatsResource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/liquibase/fake-data/devices.csv" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/config/liquibase/fake-data/devices.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/webapp/app/entities/devices/devices-update.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/app/entities/devices/devices-update.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/webapp/app/shared/model/enumerations/type.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/app/shared/model/enumerations/type.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/kotlin/com/lot/smartcossiol/domain/DevicesTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/kotlin/com/lot/smartcossiol/domain/DevicesTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/kotlin/com/lot/smartcossiol/domain/StatsTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/kotlin/com/lot/smartcossiol/domain/StatsTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/kotlin/com/lot/smartcossiol/web/rest/DevicesResourceIT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/kotlin/com/lot/smartcossiol/web/rest/DevicesResourceIT.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/kotlin/com/lot/smartcossiol/web/rest/StatsResourceIT.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/kotlin/com/lot/smartcossiol/web/rest/StatsResourceIT.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/config/CacheConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/config/CacheConfiguration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/config/liquibase/master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/config/liquibase/master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/webapp/app/entities/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/app/entities/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/webapp/app/shared/layout/menus/entities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/app/shared/layout/menus/entities.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/webapp/app/shared/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/webapp/app/shared/reducers/index.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -61,17 +50,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="smart-cossiol-backend" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="smart-cossiol-backend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="smart-cossiol-backend" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -90,56 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/jdl/schema.jdl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/web/rest/UserJWTController.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.4.RELEASE/spring-web-5.2.4.RELEASE.jar!/org/springframework/web/bind/annotation/RequestBody.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/devices/pycom/pymakr.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/domain/Devices.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/security/SecurityUtils.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1387">
-              <caret line="77" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="399">
+              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -147,7 +80,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/resources/config/application-dev.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
+            <state relative-caret-position="205">
               <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
             </state>
           </provider>
@@ -164,14 +97,6 @@
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>fak</find>
-      <find>is_developer</find>
-      <find>Accept: &quot;application/json&quot;</find>
-      <find>is missing</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -181,17 +106,14 @@
         <option value="$PROJECT_DIR$/src/main/jdl/schema.jdl" />
         <option value="$PROJECT_DIR$/backend/src/main/jdl/schame.jdl" />
         <option value="$PROJECT_DIR$/backend/src/main/resources/config/application-dev.yml" />
-        <option value="$PROJECT_DIR$/devices/pycom/pymakr.conf" />
         <option value="$PROJECT_DIR$/backend/src/main/jdl/schema.jdl" />
-        <option value="$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/web/rest/UserJWTController.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-2" />
-    <option name="y" value="1062" />
     <option name="width" value="1924" />
-    <option name="height" value="1081" />
+    <option name="height" value="1063" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -199,8 +121,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,71 +146,7 @@
               <item name="backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="jdl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart-cossiol-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="jib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart-cossiol-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart-cossiol-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart-cossiol-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart-cossiol-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lot" type="462c0819:PsiDirectoryNode" />
-              <item name="smartcossiol" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart-cossiol-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lot" type="462c0819:PsiDirectoryNode" />
-              <item name="smartcossiol" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="smart-cossiol-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="lot" type="462c0819:PsiDirectoryNode" />
-              <item name="smartcossiol" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,12 +163,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -326,83 +184,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.backend [bootRun]">
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="backend [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/backend" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bootRun" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SmartCosiolApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="smart-cosiol.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lot.smartcosiol.SmartCosiolApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SmartCossiolBackendApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="smart-cossiol-backend.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lot.smartcossiol.SmartCossiolBackendApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SmartcossiolBackendApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="smartcossiol-backend.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lot.smartcossiol.SmartcossiolBackendApp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.backend [bootRun]" />
@@ -420,24 +201,17 @@
       <option name="presentableId" value="Default" />
       <updated>1591696774678</updated>
       <workItem from="1591696778917" duration="2696000" />
-      <workItem from="1591699997641" duration="6098000" />
-      <workItem from="1591715317771" duration="552000" />
-      <workItem from="1591716682098" duration="863000" />
-      <workItem from="1591718708150" duration="6323000" />
-      <workItem from="1591793363211" duration="303000" />
-      <workItem from="1591866456985" duration="26000" />
-      <workItem from="1591872628988" duration="3912000" />
-      <workItem from="1591881079725" duration="12164000" />
+      <workItem from="1591699997641" duration="294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32937000" />
+    <option name="totallyTimeSpent" value="2990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="1062" width="1924" height="1081" extended-state="0" />
+    <frame x="-2" y="0" width="1924" height="1063" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30990416" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2747604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -447,7 +221,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3247156" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32982087" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -455,14 +229,14 @@
       <window_info anchor="bottom" id="Build" order="7" weight="0.32139093" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Hybris Console [Experimental]" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32678387" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32982087" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Run with VisualVM" order="13" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32982087" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="JProfiler" order="15" />
       <window_info anchor="bottom" id="Database Changes" order="16" />
-      <window_info anchor="bottom" id="Version Control" order="17" weight="0.32982087" />
+      <window_info anchor="bottom" id="Version Control" order="17" />
       <window_info anchor="bottom" id="Messages" order="18" weight="0.32982087" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="19" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -471,7 +245,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.11288605" />
+      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.32960597" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="SciView" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
@@ -485,39 +259,12 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/jdl/schema.jdl" />
     <entry file="file://$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/SmartcossiolBackendApp.kt" />
+    <entry file="file://$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/domain/Devices.kt" />
     <entry file="file://$PROJECT_DIR$/backend/src/main/jdl/schame.jdl" />
     <entry file="file://$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/ApplicationWebXml.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/devices/pycom/pymakr.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/domain/Devices.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/security/SecurityUtils.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/config/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -528,24 +275,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/config/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/jdl/schema.jdl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.4.RELEASE/spring-web-5.2.4.RELEASE.jar!/org/springframework/web/bind/annotation/RequestBody.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/kotlin/com/lot/smartcossiol/web/rest/UserJWTController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+        <state relative-caret-position="399">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -599,12 +339,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>devices</last-edited>
+          <last-edited>backend</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
