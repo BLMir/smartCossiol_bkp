@@ -22,7 +22,7 @@ class Auth:
             with open('/flash/log.txt', 'a') as f:
                 f.write(idToken)
                 print("write")
-            with open('/flash/log.txt', 'a') as f:
+            with open('/flash/log.txt') as f:
                 value = f.read()
         
             print(value)
