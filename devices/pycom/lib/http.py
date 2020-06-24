@@ -59,7 +59,6 @@ def http_post(url,data):
     while True:
         data = s.recv(1024)
         if data:
-            
             data=(str(data, 'utf8')) 
             data2=data+data2
             count=count+1
@@ -69,10 +68,7 @@ def http_post(url,data):
             
         else:
             break
- 
-    val=(data2.find("id_token"))
+    print(data2)
+    val=(data2.find("id_token\" : \""))
     val2=(data2.find("}"))
     print(data2[(val):val2])
-
-    
-        

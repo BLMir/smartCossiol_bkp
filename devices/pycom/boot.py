@@ -21,4 +21,4 @@ for net in nets:
         print('WLAN connection succeeded!')
         break
 
-http.http_post("http://192.168.1.133/api/authenticate","asdf")
+http.http_post("http://192.168.1.139/api/authenticate","asdf")
