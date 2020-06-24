@@ -1,24 +1,13 @@
-from network import WLAN
-import machine
 import json
 import http
+from Connect import Connect
+from Auth import Auth
 
 with open('resources/config.json') as configFile:
     config = json.load(configFile)
 
-wlan = WLAN()
+Connect(config['SSID'], config['PASS']).wifi()
+Auth().authenticate()
 
-wlan = WLAN(mode=WLAN.STA)
-nets = wlan.scan()
-
-for net in nets:
-    print(net)
-    if net.ssid == config['SSID']:
-        print('Network found!OO')
-        wlan.connect(net.ssid, auth=(net.sec, config['PASS']), timeout=5000)
-        while not wlan.isconnected():
-            machine.idle() # save power while waiting
-        print('WLAN connection succeeded!')
-        break
 
 http.http_post("http://192.168.1.139/api/authenticate","asdf")
