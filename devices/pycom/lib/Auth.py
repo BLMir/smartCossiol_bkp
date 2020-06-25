@@ -2,8 +2,6 @@ import http
 import json
 import machine
 import binascii
-import pycom
-import struct
 
 class Auth:
     PATH = "api/authenticate"
@@ -15,25 +13,32 @@ class Auth:
 
     def authenticate(self):
         body = self.getBodyCredentials()
-        response = http.postRequest(self.host, self.PATH, self.port, body)
-        idToken = json.loads(response)["id_token"]
-        print("asdf")
-        try:
-            with open('/flash/log.txt', 'a') as f:
-                f.write(idToken)
-                print("write")
-            with open('/flash/log.txt') as f:
-                value = f.read()
-        
-            print(value)
+        response = http.postRequestWithResponse(self.host, self.PATH, self.port, body)
 
-        except OSError as e:
-            print('Error {} writing to file'.format(e))
-        # pycom.nvs_set('id_token', struct.unpack('>i', idToken.decode('hex')))        
-
+        idToken = self.getTokenFromResponse(response)
+        self.setToken(idToken)
 
     def getBodyCredentials(self):
         return "{\"username\":\""+ self.getMachineUniqueId() +"\" , \"password\":\"" + self.getMachineUniqueId() +"\"} "
 
     def getMachineUniqueId(self):
         return str(binascii.hexlify(machine.unique_id(), '_').decode())
+
+    def setToken(self, idToken):
+        try:
+            with open('/flash/token.txt', 'a') as f:
+                f.write(idToken)
+        except OSError as e:
+            print('Error {} sotring the token to file'.format(e))
+
+    def getToken(self):
+        try:
+            with open('/flash/token.txt') as f:
+                result = f.read()
+                f.close()
+                return result
+        except OSError as e:
+            print('Error {} getting the token from file'.format(e))
+
+    def getTokenFromResponse(self, response):
+        return (json.loads(response)["id_token"])
