@@ -1,74 +1,61 @@
 import socket
-import json
-import machine
-import binascii
+from Auth import Auth
 
-def http_get(url):
-    _, _, host, path = url.split('/', 3)
-    print(host)
-    print(path)
-    addr = socket.getaddrinfo(host, 8088)[0][-1]
-    print(addr)
-    s = socket.socket()
-    s.connect(addr)
-    print(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
-    s.send('POST /soil HTTP/1.0\r\nHost: 192.168.1.131\r\n Content-Type: application/json\r\n {} \r\n')
+def postRequestWithResponse(host,path,port, body):
+    s = getSocket(host, port)
+
+    payloadSchema = ("POST /{path} HTTP/1.1\r\n" # send headers
+        "HOST:  {host}\r\n"
+        "Content-Length: {contentLength}\r\n"
+        "Content-Type: application/json\r\n"
+        "\r\n" # blank line seperating headers from body 
+        "{bodyJson}")
+
+    payload = payloadSchema.format(
+        path = path,
+        contentLength=len(str(body).encode('ascii')),
+        host=str(host) + ":" + str(port),
+        bodyJson=body
+    )
+    s.send(payload)
+
+    response= b''
     while True:
-        data = s.recv(10)
-        if data:
-            print(str(data, 'utf8'), end='')
-        else:
+        chunk = s.recv(1024)
+        if not chunk:
             break
-    s.close()
-    return 0 
+        response += chunk
 
-def http_post(url,data):
-    _, _, host, path = url.split('/', 3)
-    port = 8080
-    print(host)
-    print(path)
+    return (cleanResponse(response))
 
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-    s.connect((host,8080))
+def sendMeasure(host,path,port, body):
+    s = getSocket(host, port)
 
     payloadSchema = ("POST /{path} HTTP/1.1\r\n" # send headers
         "HOST:  {host}\r\n"
         "Content-Length: {content_length}\r\n"
-        "Content-Type: {content_type}\r\n"
+        "Authorization: Bearer {idToken}\r\n"
+        "Content-Type: application/json\r\n"
         "\r\n" # blank line seperating headers from body 
-        "{body_json}")
+        "{bodyJson}")
 
-    body = "{\"username\":\""+ str(binascii.hexlify(machine.unique_id(), '_').decode()) +"\" , \"password\":\"" + str(binascii.hexlify(machine.unique_id(), '_').decode()) +"\"} "
-    print(body)
-    body_bytes = str(body).encode('ascii')
     payload = payloadSchema.format(
         path = path,
-        content_type="application/json",
-        content_length=len(body_bytes),
+        contentLength=len(str(body).encode('ascii')),
         host=str(host) + ":" + str(port),
-        body_json=body
+        bodyJson=body,
+        idToken = Auth().getToken()
     )
-    
-    print(payload)
+
     s.send(payload)
-
-    data2=""
-    count=0
     
-    while True:
-        data = s.recv(1024)
-        if data:
-            data=(str(data, 'utf8')) 
-            data2=data+data2
-            count=count+1
-            if count==2:
-                break
+def getSocket(host, port):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.connect((host,port))
 
-            
-        else:
-            break
-    print(data2)
-    val=(data2.find("id_token\" : \""))
-    val2=(data2.find("}"))
-    print(data2[(val):val2])
+    return s
+
+def cleanResponse(response):
+    result = response.split(b'd5\r\n', 1)[1].split(b'\r\n0\r\n\r\n',1)[0]
+
+    return (str(result, 'utf8'))
