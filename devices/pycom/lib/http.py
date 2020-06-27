@@ -1,61 +1,57 @@
 import socket
-from Auth import Auth
 
-def postRequestWithResponse(host,path,port, body):
-    s = getSocket(host, port)
-
-    payloadSchema = ("POST /{path} HTTP/1.1\r\n" # send headers
-        "HOST:  {host}\r\n"
-        "Content-Length: {contentLength}\r\n"
-        "Content-Type: application/json\r\n"
-        "\r\n" # blank line seperating headers from body 
-        "{bodyJson}")
-
-    payload = payloadSchema.format(
-        path = path,
-        contentLength=len(str(body).encode('ascii')),
-        host=str(host) + ":" + str(port),
-        bodyJson=body
-    )
-    s.send(payload)
-
-    response= b''
+def http_get(url):
+    _, _, host, path = url.split('/', 3)
+    print(host)
+    print(path)
+    addr = socket.getaddrinfo(host, 8080)[0][-1]
+    print(addr)
+    s = socket.socket()
+    s.connect(addr)
+    print(bytes('GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n' % (path, host), 'utf8'))
+    s.send('POST /soil HTTP/1.0\r\nHost: 192.168.1.131\r\n Content-Type: application/json\r\n {} \r\n')
     while True:
-        chunk = s.recv(1024)
-        if not chunk:
+        data = s.recv(10)
+        if data:
+            print(str(data, 'utf8'), end='')
+        else:
             break
-        response += chunk
+    s.close()
+    return 0
 
-    return (cleanResponse(response))
+def http_post(url,data):
 
-def sendMeasure(host,path,port, body):
-    s = getSocket(host, port)
+    user="24_0a_c4_02_7a_f0"
 
-    payloadSchema = ("POST /{path} HTTP/1.1\r\n" # send headers
-        "HOST:  {host}\r\n"
-        "Content-Length: {content_length}\r\n"
-        "Authorization: Bearer {idToken}\r\n"
+    _, _, host, path = url.split('/', 3)
+    print(host)
+    print(path)
+    addr = socket.getaddrinfo(host, 8080)[0][-1]
+    print(addr)
+    s = socket.socket()
+    s.connect(addr)
+    #DATA = ("POST /soil HTTP/1.1\r\n" # send headers
+        # "HOST: http://192.168.1.131:8088/\r\n"
+    #    "Content-Length: 62\r\n"
+    #    "Content-Type: application/json\r\n"
+    #    "\r\n" # blank line seperating headers from body
+    #    "{\"username\":\"24_0a_c4_02_7a_f0\",\"password\":\"24_0a_c4_02_7a_f0\"} ")
+
+    DATA = ("POST /HTTP/1.1\r\n" # send headers
+        "HOST: http://192.168.1.131:8080/\r\n"
+        "Content-Length: 62\r\n"
         "Content-Type: application/json\r\n"
-        "\r\n" # blank line seperating headers from body 
-        "{bodyJson}")
+        "\r\n" # blank line seperating headers from body
+        "{\"username\":\"24_0a_c4_02_7a_f0\",\"password\":\"24_0a_c4_02_7a_f0\"} ")
 
-    payload = payloadSchema.format(
-        path = path,
-        contentLength=len(str(body).encode('ascii')),
-        host=str(host) + ":" + str(port),
-        bodyJson=body,
-        idToken = Auth().getToken()
-    )
 
-    s.send(payload)
-    
-def getSocket(host, port):
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect((host,port))
+    print(DATA)
+    s.send(DATA)
 
-    return s
-
-def cleanResponse(response):
-    result = response.split(b'd5\r\n', 1)[1].split(b'\r\n0\r\n\r\n',1)[0]
-
-    return (str(result, 'utf8'))
+    while True:
+        data = s.recv(4096)
+        if data:
+            print(str(data, 'utf8'), end='')
+        else:
+            break
+    s.close()
