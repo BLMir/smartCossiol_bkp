@@ -26,6 +26,7 @@ class Auth:
 
     def setToken(self, idToken):
         try:
+            self.deleteToken()
             with open('/flash/token.txt', 'a') as f:
                 f.write(idToken)
         except OSError as e:
@@ -42,3 +43,7 @@ class Auth:
 
     def getTokenFromResponse(self, response):
         return (json.loads(response)["id_token"])
+
+    def deleteToken(self):
+        with open('/flash/token.txt', "w"):
+            pass

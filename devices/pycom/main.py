@@ -10,8 +10,6 @@ pycom.heartbeat(False)
 
 #pycom.rgbled(0x007f00) # green
 
-#pycom.nvs_set('mode',0)
-
 def switch_mode(arg):
     switcher ={
     0:"config_mode",

@@ -3,8 +3,10 @@ import socket
 import machine
 from machine import Timer
 import http
+import json
 
 class Clock:
+    PATH = "api/stats"
     def __init__(self,time,period,psoil,ptemp):
         self.handler = ""
         #self.value = 0
@@ -48,4 +50,11 @@ class Clock:
         degF = ((degC * 9.0) / 5.0) + 32.0
 
         print(degC)
+        with open('resources/config.json') as configFile:
+            config = json.load(configFile)
+
+        http.sendMeasure(config["HOST"],self.PATH, config["PORT"], self.getBodyStats())
         print("******************************")
+
+    def getBodyStats(self):
+        return "{\"devices\":{ \"id\" : 1 } , \"insertAt\":\"2020-06-27T11:29:40.705Z\", \"light\" : 0, \"soil\":2 , \"temp\": 2} "
