@@ -29,15 +29,20 @@ def postRequestWithResponse(host,path,port, body):
     return (cleanResponse(response))
 
 def sendMeasure(host,path,port, body):
+
+    path = "api/stats"
     s = getSocket(host, port)
 
     payloadSchema = ("POST /{path} HTTP/1.1\r\n" # send headers
         "HOST:  {host}\r\n"
-        "Content-Length: {content_length}\r\n"
+        "Content-Length: {contentLength}\r\n"
         "Authorization: Bearer {idToken}\r\n"
         "Content-Type: application/json\r\n"
         "\r\n" # blank line seperating headers from body 
         "{bodyJson}")
+
+    print(host)
+    print(port)
 
     payload = payloadSchema.format(
         path = path,
@@ -46,7 +51,7 @@ def sendMeasure(host,path,port, body):
         bodyJson=body,
         idToken = Auth().getToken()
     )
-
+    print(payload)
     s.send(payload)
     
 def getSocket(host, port):

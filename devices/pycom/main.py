@@ -1,17 +1,26 @@
 import pycom
 import machine
-import sys 
+import sys
 sys.path.append('/lib')
-from Clock import Clock
+sys.path.append('/resources')
+import config_mode
+import normal_mode
 
 pycom.heartbeat(False)
 
-# clock_temp = Clock(10,True)
-# clock_temp.handler = clock_temp._measure_temp
-# clock_temp._set_alarm()
+#pycom.rgbled(0x007f00) # green
 
-# clock_soil = Clock(50,True)
-# clock_soil.handler = clock_soil._measure_soil
-# clock_soil._set_alarm()
+def switch_mode(arg):
+    switcher ={
+    0:"config_mode",
+    1:"normal_mode",
+    }
+    mode=(switcher.get(arg,"invalid"))
+    return mode
+
+mode = pycom.nvs_get('mode')
+
+dev_mode=switch_mode(mode)
+eval(dev_mode).init()
 
 machine.idle()

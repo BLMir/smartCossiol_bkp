@@ -7,5 +7,5 @@ with open('resources/config.json') as configFile:
     config = json.load(configFile)
 
 Connect(config['SSID'], config['PASS']).wifi()
-Auth().authenticate()
-print(Auth().getToken())
+# Auth().authenticate()
+# print(Auth().getToken())
